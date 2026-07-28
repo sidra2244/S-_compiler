@@ -1,0 +1,57 @@
+smain {
+    $$ Data types demonstration
+    sint @integerVar = 100.
+    sfloat @floatVar = 45.67.
+    sdouble @doubleVar = 123.456789.
+    schar @charVar = 'Z'.
+    sstring @stringVar = "S++ Language".
+    
+    $$ Arithmetic operations
+    sint @add = @integerVar + 50.
+    sint @sub = @integerVar - 30.
+    sint @mul = @integerVar * 2.
+    sint @div = @integerVar / 5.
+    sint @mod = @integerVar % 7.
+    sint @pow = @integerVar ^ 2.
+    
+    sout @add.
+    sout @sub.
+    sout @mul.
+    sout @div.
+    sout @mod.
+    sout @pow.
+    
+    $$ Relational operations
+    sif (@integerVar == 100) {
+        sout "Value is 100".
+    }
+    selif (@integerVar > 100) {
+        sout "Value is greater than 100".
+    }
+    selse {
+        sout "Value is less than 100".
+    }
+    
+    $$ Loop with for
+    sfor (@i = 1 to 10) {
+        sout @i.
+    }
+    
+    $$ Bitwise operations
+    sint @bitAnd = @integerVar & 255.
+    sint @bitOr = @integerVar | 0.
+    
+    $$ Nested conditions
+    sif (@integerVar > 0) {
+        sif (@integerVar < 200) {
+            sout "Value is between 0 and 200".
+        }
+    }
+    
+    $$ Comment examples
+    $$ This is a single line comment
+    
+    $* This is a
+       multi-line comment
+       that spans multiple lines *$
+}
